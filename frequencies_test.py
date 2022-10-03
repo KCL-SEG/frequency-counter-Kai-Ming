@@ -33,7 +33,7 @@ def test_example_2():
     assert output['Hello'] == 1
     assert 100 not in output.keys()
 
-
+"""
 def runAll():
     test_mixed_list()
     test_empty_list()
@@ -41,3 +41,4 @@ def runAll():
     test_example_2()
 
 runAll()
+"""
