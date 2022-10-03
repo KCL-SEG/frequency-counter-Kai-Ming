@@ -6,27 +6,22 @@ def frequencies(items):
 
     frequencies = {}
     for item in items:
-        """
-        key_list = list(frequencies.keys())
-        for key in key_list:
-            if item == key:
-                frequency = frequencies[key]
+        try:
+            item % 1 == 0
+            item = str(item)
+            if item in frequencies: 
+                frequency = frequencies[item]
                 frequency += 1
                 frequencies[item] = frequency
-            elif key.isDigit():
-                if item == int(key):
-                    frequency = frequencies[key]
-                    frequency += 1
-                    frequencies[key] = frequency
             else:
                 frequencies[item] = 1
-        """
-        if item in frequencies: 
-            frequency = frequencies[item]
-            frequency += 1
-            frequencies[item] = frequency
-        else:
-            frequencies[item] = 1
+        except TypeError:
+            if item in frequencies: 
+                frequency = frequencies[item]
+                frequency += 1
+                frequencies[item] = frequency
+            else:
+                frequencies[item] = 1
         """
         try:
             frequency = frequencies[item]
